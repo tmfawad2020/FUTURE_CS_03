@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <p class="eyebrow">Future Interns • Cyber Security Task 04</p>
+      <h1>Password Strength Analyzer</h1>
+      <p class="subtitle">Check password length, complexity, common patterns, and get safer alternatives.</p>
+
+      <label for="password">Enter a password to analyze</label>
+      <div class="password-row">
+        <input id="password" type="password" autocomplete="new-password" placeholder="Type a password">
+        <button id="toggle" type="button">Show</button>
+      </div>
+
+      <div class="meter" aria-label="Password strength">
+        <div id="meterBar"></div>
+      </div>
+      <div class="score-row"><strong id="strength">No password</strong><span id="score">0/100</span></div>
+
+      <div class="checks">
+        <div><span id="lengthIcon">○</span> At least 12 characters <b id="lengthText"></b></div>
+        <div><span id="upperIcon">○</span> Uppercase letter <b id="upperText"></b></div>
+        <div><span id="lowerIcon">○</span> Lowercase letter <b id="lowerText"></b></div>
+        <div><span id="numberIcon">○</span> Number <b id="numberText"></b></div>
+        <div><span id="symbolIcon">○</span> Special character <b id="symbolText"></b></div>
+        <div><span id="patternIcon">○</span> No common/repeated pattern <b id="patternText"></b></div>
+        <div><span id="commonIcon">○</span> Not a common password <b id="commonText"></b></div>
+      </div>
+
+      <div class="advice">
+        <h2>Suggestions</h2>
+        <ul id="suggestions"><li>Enter a password to see recommendations.</li></ul>
+      </div>
+
+      <div class="alternative">
+        <h2>Stronger alternative</h2>
+        <code id="alternative">Generate a password to get an example.</code>
+        <button id="generate" type="button">Generate</button>
+      </div>
+
+      <p class="privacy">Privacy: analysis happens in your browser. This demo does not send or store your password.</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
